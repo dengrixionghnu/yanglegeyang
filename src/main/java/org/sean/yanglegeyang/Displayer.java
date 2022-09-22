@@ -3,21 +3,21 @@ package org.sean.yanglegeyang;
 import java.util.List;
 import java.util.Objects;
 
-public class Shower implements EventListener {
+public class Displayer implements EventListener {
 
     private CardRepository cardRepository;
     private CardSlot slot;
     private int x;
     private int y;
 
-    public Shower(CardRepository cardRepository, CardSlot slot, int x, int y) {
+    public Displayer(CardRepository cardRepository, CardSlot slot, int x, int y) {
         this.cardRepository = cardRepository;
         this.slot = slot;
         this.x = x;
         this.y = y;
     }
 
-    public void show() {
+    public void display() {
         Card[][] cards = cardRepository.visibleCards();
         System.out.println("您的卡牌");
         for (int i = 0; i < x; i++) {
@@ -50,7 +50,7 @@ public class Shower implements EventListener {
             System.out.println("对不起，挑战失败，卡槽已经满了，下次加油哦");
             System.exit(0);
         } else {
-            show();
+            display();
         }
     }
 }

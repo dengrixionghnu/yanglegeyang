@@ -16,8 +16,8 @@ public class Game {
         CardRepository cardRepository = new CardRepository(x,y,size,eventPublisher);
         cardRepository.init();
         CardSlot slot = new CardSlot(slotSize,eventPublisher);
-        Shower shower = new Shower(cardRepository,slot,x,y);
-        eventRegister.registerListener(shower);
+        Displayer displayer = new Displayer(cardRepository,slot,x,y);
+        eventRegister.registerListener(displayer);
         eventPublisher.publishEvent(Event.UPDATE);
         Player player = new Player(cardRepository,slot);
         while (true){
