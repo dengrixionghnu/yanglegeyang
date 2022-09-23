@@ -6,10 +6,10 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class Game {
 
     public void run(){
-        int x=5;
-        int y=5;
+        int x=3;
+        int y=4;
         int size = 15;
-        int slotSize = 7;
+        int slotSize = 5;
         BlockingQueue<Event> eventQueue = new LinkedBlockingQueue<>();
         EventPublisher eventPublisher = new EventPublisher(eventQueue);
         EventRegister eventRegister = new EventRegister(eventQueue);
