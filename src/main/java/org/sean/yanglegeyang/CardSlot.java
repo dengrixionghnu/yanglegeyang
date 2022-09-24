@@ -2,7 +2,6 @@ package org.sean.yanglegeyang;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import static org.sean.yanglegeyang.Event.UPDATE;
@@ -20,14 +19,7 @@ public class CardSlot {
 
     public void add(Card card) {
         slot.add(card);
-        Collections.sort(slot, new Comparator<Card>() {
-
-            @Override
-            public int compare(Card o1, Card o2) {
-                return o1.getType().hashCode() - o2.getType().hashCode();
-            }
-        });
-
+        Collections.sort(slot, (o1, o2) -> o1.getType().compareTo(o2.getType()));
         List<Card> remove = new ArrayList<>();
         int index = 0;
         String type = "";

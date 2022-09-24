@@ -11,10 +11,6 @@ public class Card {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
     @Override
     public String toString() {
         return type;
