@@ -8,7 +8,9 @@ import java.util.Random;
 public class CardGenerator {
 
     Random random = new Random();
-    private String[] typeDict = new String[]{"a", "b", "c", "d", "e", "f", "g", "H", "I", "J", "K", "L", "M"};
+    //private String[] typeDict = new String[]{"a", "b", "c", "d", "e", "f", "g", "H", "I", "J", "K", "L", "M"};
+    private String[] typeDict = new String[]{"🍎", "🍌", "🍊", "🍐", "🌰", "🍇", "🍉", "🥝", "🐗","🍓","🍍","🍈","🍒",
+            "🍑"};
     private int typeNum = typeDict.length;
 
     public List<Card> generateCard(int size) {

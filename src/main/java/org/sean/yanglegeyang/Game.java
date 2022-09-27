@@ -9,7 +9,7 @@ public class Game {
         int x=3;
         int y=4;
         int size = 15;
-        int slotSize = 5;
+        int slotSize = 7;
         BlockingQueue<Event> eventQueue = new LinkedBlockingQueue<>();
         EventPublisher eventPublisher = new EventPublisher(eventQueue);
         EventRegister eventRegister = new EventRegister(eventQueue);
