@@ -22,6 +22,7 @@ public class CardGenerator {
             cards.add(new Card(type));
         }
         Collections.shuffle(cards);
+        Collections.shuffle(cards);
         return cards;
     }
 }
